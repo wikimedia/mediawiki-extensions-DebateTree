@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Sophivorus"
+		]
+	},
+	"debatetree-desc": "Debates estructurados por el algoritmo dialéctico",
+	"debatetree-sustained": "SOSTENIDO",
+	"debatetree-refuted": "REFUTADO",
+	"debatetree-dummy": "Para agregar una objeción, [$1 edita esta página]. Para entender como funciona el sistema de debate, haz [https://es.wikiversity.org/wiki/Algoritmo_dial%C3%A9ctico click aquí].",
+	"debatetree-counts": "($1 {{PLURAL:$1|objeción|objeciones}}, $2 {{PLURAL:$2|sostenida|sostenidas}}, $3 {{PLURAL:$3|anidada|anidadas}})"
+}

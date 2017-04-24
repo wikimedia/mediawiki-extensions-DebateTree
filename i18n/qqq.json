@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Sophivorus"
+		]
+	},
+	"debatetree-desc": "{{desc|name=WikipediaExtracts|url=https://www.mediawiki.org/wiki/Extension:DebateTree}}",
+	"debatetree-sustained": "Tag for the sustained arguments",
+	"debatetree-refuted": "Tag for the refuted arguments",
+	"debatetree-dummy": "Dummy text for dummy objections",
+	"debatetree-counts": "Objection counts"
+}

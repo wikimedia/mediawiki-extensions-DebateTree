@@ -1,0 +1,29 @@
+.debatetree-argument,
+.debatetree-dummy {
+	background: #f9f9f9;
+	border: 1px solid #aaa;
+	border-radius: 10px;
+	box-shadow: 5px 5px 10px #aaa;
+	cursor: pointer;
+	margin: 1em 0;
+	padding: 1em;
+	overflow: hidden;
+}
+
+.debatetree-status {
+	float: right;
+	margin-left: 10px;
+	padding: 0 5px;
+}
+
+.debatetree-counts {
+	color: #aaa;
+}
+
+.debatetree-sustained {
+	background: #5f5;
+}
+
+.debatetree-refuted {
+	background: #f55;
+}
