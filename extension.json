@@ -1,7 +1,7 @@
 {
 	"manifest_version": 1,
 	"name": "DebateTree",
-	"version": "3.1",
+	"version": "4.0",
 	"author": "[http://mediawiki.org/wiki/User:Sophivorus Sophivorus]",
 	"url": "https://www.mediawiki.org/wiki/Extension:DebateTree",
 	"descriptionmsg": "debatetree-desc",
@@ -17,15 +17,15 @@
 	},
 	"ResourceModules": {
 		"ext.DebateTree.css": {
-			"styles": "DebateTree.css"
+			"styles": "DebateTree.css",
+			"position": "top"
 		},
 		"ext.DebateTree": {
 			"scripts": "DebateTree.js",
 			"messages": [
 				"debatetree-sustained",
 				"debatetree-refuted",
-				"debatetree-counts",
-				"debatetree-dummy"
+				"debatetree-counts"
 			]
 		}
 	},

@@ -1,30 +1,39 @@
 var DebateTree = {
 
-	// GETTERS
-
+	/**
+	 * Get all the arguments in the page
+	 */
 	getArguments: function () {
-		return $( '.debatetree-argument' );
+		return $( '.debatetree ul li' );
 	},
 
+	/**
+	 * Get the objections to the given argument
+	 */
 	getObjections: function ( argument ) {
-		return $( argument ).children( '.debatetree-argument' );
+		return $( argument ).children( 'ul' ).children( 'li' );
 	},
 
-	getDescendants: function ( argument ) {
-		return $( '.debatetree-argument', argument );
-	},
-
+	/**
+	 * Get the sustained objections to the given argument
+	 */
 	getSustainedObjections: function ( argument ) {
 		return DebateTree.getObjections( argument ).filter( DebateTree.isSustained );	
 	},
 
-	// FILTERS
+	/**
+	 * Get the nested objections of the given argument
+	 */
+	getNestedObjections: function ( argument ) {
+		return $( 'li', argument );
+	},
 
+	/**
+	 * Return true if the given argument is sustained
+	 */
 	isSustained: function ( index, argument ) {
 		return DebateTree.getSustainedObjections( argument ).length ? false : true;
 	},
-
-	// DOM MODIFIERS
 
 	/**
 	 * Prepend the status to the argument
@@ -38,49 +47,38 @@ var DebateTree = {
 	},
 
 	/**
-	 * Append the stats to the argument
+	 * Append the counts to the argument
 	 */
 	addCounts: function ( index, argument ) {
 		var objectionCount = DebateTree.getObjections( argument ).length,
 			sustainedObjectionCount = DebateTree.getSustainedObjections( argument ).length,
-			descendantCount = DebateTree.getDescendants( argument ).length,
-			text = mw.message( 'debatetree-counts', objectionCount, sustainedObjectionCount, descendantCount ),
+			nestedObjectionCount = DebateTree.getNestedObjections( argument ).length,
+			text = mw.message( 'debatetree-counts', objectionCount, sustainedObjectionCount, nestedObjectionCount ),
 			span = $( '<span>' ).addClass( 'debatetree-counts' ).text( text );
 
 		if ( objectionCount ) {
-			DebateTree.getObjections( argument ).first().before( span );
+			$( argument ).children( 'ul' ).first().before( span );
 		} else {
 			$( argument ).append( ' ', span );
 		}
 	},
 
 	/**
-	 * Add a dummy objection to the argument
+	 * Toggle the objections of the clicked argument
 	 */
-	addDummyObjection: function ( index, argument ) {
-		var editLink = $( '#ca-edit a' ).attr( 'href' ),
-			dummyContent = mw.message( 'debatetree-dummy', editLink ).parse(),
-			dummyObjection = $( '<div>' ).addClass( 'debatetree-argument' ).html( dummyContent );
-
-		$( argument ).append( dummyObjection );
-	},
-
-	// EVENT HANDLERS
-
 	toggleObjections: function ( event ) {
 		DebateTree.getObjections( this ).toggle();
 		event.stopPropagation();
 	},
 
 	/**
-	 * Initialisation script
+	 * Initialization script
 	 */
 	init: function () {
-		var arguments = DebateTree.getArguments();
-		arguments.each( DebateTree.addStatus );
-		arguments.each( DebateTree.addCounts );
-		arguments.each( DebateTree.addDummyObjection );
-		arguments.click( DebateTree.toggleObjections ).click();
+		var args = DebateTree.getArguments();
+		args.each( DebateTree.addStatus );
+		args.each( DebateTree.addCounts );
+		args.click( DebateTree.toggleObjections ).click();
 	}
 };
 
