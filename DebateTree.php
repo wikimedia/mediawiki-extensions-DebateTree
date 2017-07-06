@@ -8,19 +8,15 @@ class DebateTree {
 	}
 
 	static function onParserFirstCallInit( Parser &$parser ) {
-		$parser->setHook( 'argument', 'DebateTree::renderArgument' );
-		$parser->setHook( 'objection', 'DebateTree::renderArgument' );
+		$parser->setHook( 'debatetree', 'DebateTree::render' );
 	}
 
-	static function renderArgument( $input, array $args, Parser $parser, PPFrame $frame ) {
-
-		$content = $parser->recursiveTagParse( $input, $frame );
-
+	static function render( $input, array $ARGS, Parser $parser, PPFrame $frame ) {
 		return Html::rawElement(
 			'div', [
-				'class' => 'debatetree-argument'
+				'class' => 'debatetree'
 			],
-			$content
+			$input
 		);
 	}
 }
