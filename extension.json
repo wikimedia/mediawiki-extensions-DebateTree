@@ -17,8 +17,7 @@
 	},
 	"ResourceModules": {
 		"ext.DebateTree.css": {
-			"styles": "DebateTree.css",
-			"position": "top"
+			"styles": "DebateTree.css"
 		},
 		"ext.DebateTree": {
 			"scripts": "DebateTree.js",
