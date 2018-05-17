@@ -2,7 +2,7 @@
 	"manifest_version": 1,
 	"name": "DebateTree",
 	"version": "4.0",
-	"author": "[http://mediawiki.org/wiki/User:Sophivorus Sophivorus]",
+	"author": "[https://www.mediawiki.org/wiki/User:Sophivorus Sophivorus]",
 	"url": "https://www.mediawiki.org/wiki/Extension:DebateTree",
 	"descriptionmsg": "debatetree-desc",
 	"type": "other",
