@@ -4,8 +4,12 @@
 			"Sophivorus"
 		]
 	},
-	"debatetree-desc": "Debates structured by the dialectic algorithm",
-	"debatetree-sustained": "SUSTAINED",
+	"debatetree-desc": "Tools for structured debates",
+	"debatetree-balance": "BALANCE: $1",
+	"debatetree-counts": "($1 {{PLURAL:$1|objection|objections}}, $2 sustained, $3 nested)",
+	"debatetree-conclusion": "CONCLUSION: $1",
+	"debatetree-undecided": "UNDECIDED",
 	"debatetree-refuted": "REFUTED",
-	"debatetree-counts": "($1 {{PLURAL:$1|objection|objections}}, $2 sustained, $3 nested)"
+	"debatetree-sustained": "SUSTAINED",
+	"debatetree-weight": "WEIGHT: $1"
 }

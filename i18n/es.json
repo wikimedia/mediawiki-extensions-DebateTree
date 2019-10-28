@@ -4,8 +4,12 @@
 			"Sophivorus"
 		]
 	},
-	"debatetree-desc": "Debates estructurados por el algoritmo dialéctico",
-	"debatetree-sustained": "SOSTENIDO",
+	"debatetree-desc": "Herramientas para debates estructurados",
+	"debatetree-balance": "BALANCE: $1",
+	"debatetree-conclusion": "CONCLUSIÓN: $1",
+	"debatetree-counts": "($1 {{PLURAL:$1|objeción|objeciones}}, $2 {{PLURAL:$2|sostenida|sostenidas}}, $3 {{PLURAL:$3|anidada|anidadas}})",
+	"debatetree-undecided": "INDECISO",
 	"debatetree-refuted": "REFUTADO",
-	"debatetree-counts": "($1 {{PLURAL:$1|objeción|objeciones}}, $2 {{PLURAL:$2|sostenida|sostenidas}}, $3 {{PLURAL:$3|anidada|anidadas}})"
+	"debatetree-sustained": "SOSTENIDO",
+	"debatetree-weight": "PESO: $1"
 }
