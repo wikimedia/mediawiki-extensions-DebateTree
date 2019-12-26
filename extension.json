@@ -1,5 +1,4 @@
 {
-	"manifest_version": 1,
 	"name": "DebateTree",
 	"version": "4.0",
 	"author": "[https://www.mediawiki.org/wiki/User:Sophivorus Sophivorus]",
@@ -35,5 +34,6 @@
 	"Hooks": {
 		"BeforePageDisplay": "DebateTree::onBeforePageDisplay",
 		"ParserFirstCallInit": "DebateTree::onParserFirstCallInit"
-	}
+	},
+	"manifest_version": 1
 }
