@@ -2,16 +2,30 @@
 
 class DebateTree {
 
-	static function onBeforePageDisplay( OutputPage &$out, Skin &$skin ) {
+	/**
+	 * @param OutputPage &$out
+	 * @param Skin &$skin
+	 */
+	public static function onBeforePageDisplay( OutputPage &$out, Skin &$skin ) {
 		$out->addModuleStyles( 'ext.DebateTree.css' );
 		$out->addModules( 'ext.DebateTree' );
 	}
 
-	static function onParserFirstCallInit( Parser &$parser ) {
+	/**
+	 * @param Parser &$parser
+	 */
+	public static function onParserFirstCallInit( Parser &$parser ) {
 		$parser->setHook( 'debatetree', 'DebateTree::render' );
 	}
 
-	static function render( $input, array $ARGS, Parser $parser, PPFrame $frame ) {
+	/**
+	 * @param mixed $input
+	 * @param array $args
+	 * @param Parser $parser
+	 * @param PPFRame $frame
+	 * @return string
+	 */
+	public static function render( $input, array $args, Parser $parser, PPFrame $frame ) {
 		return Html::rawElement(
 			'div', [
 				'class' => 'debatetree'
